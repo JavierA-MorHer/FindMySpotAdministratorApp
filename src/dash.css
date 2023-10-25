@@ -1,0 +1,76 @@
+.dasboard{
+    display: flex;
+    height: 100%;
+   width: 100%;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#root{
+    height: 100%;
+}
+
+aside{
+    height: 100%;
+    display: flexbox;
+    background-color: grey;
+
+    
+}
+
+.Headernbar{
+    text-align: center;
+    font-size: large;
+}
+
+
+main{
+    display: table;
+    width: 100%;
+    height: auto;
+}
+
+.header{
+    display: table-row;
+    height: 1cm;
+}
+
+.cards{
+    display: table-row;
+  display: flex;
+  height: auto;
+    
+}
+.n_usuario{
+    text-align: center;
+    display: table-cell;
+  background-color: hwb(202 0% 50%);
+  margin: auto;
+}
+
+.ganancias{
+    text-align: center;
+    display: table-cell;
+    background-color: #4eb94e;
+    margin: auto;
+}
+
+.n_estancias{
+    text-align: center;
+    display: table-cell;
+    background-color: rgb(126, 67, 173);
+    margin: auto;
+}
+
+.Body_Estacionamientos{
+    display: table-row;
+    height: 100px;
+}
+
+
+
