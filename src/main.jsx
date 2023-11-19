@@ -7,6 +7,7 @@ import {
 import Dashboard from './components/Dashboard.jsx'
 import Login from './components/Login.jsx'
 import * as bootstrap from 'bootstrap'
+import Dashboardprueba from './components/Dashboardprueba.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,14 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard />,
   },
+  {
+    path: "/dashboard/preba",
+    element: <Dashboardprueba />,
+  },
+  {
+    path: "/dashboar/historial"
+  },
+
 ]);
 
 

@@ -1,31 +1,25 @@
 import { useState } from 'react'
 import '../dash.css'
+import Sidebar from './Sidevar/Sidebar.jsx'
+import Inicio from './Page/Inicio/Inicio.jsx'
+import Historial from './Page/HistorialEstancias/Historial.jsx'
 
 function dashboard(){
+
+
     return(
-      <div className='row'>
-        <div className='col w-25 '>
-            <div className='header'>
-                <div className='Headernbar'>
-                    FindMySpot
-                </div>
-            </div>
-
-            <div nav flex-column>
-                    <ul class="navbar-nav">
-                        <li className='lista-navegacion'>
-                            inicio
-                        </li>
-                        <li className='lista-navegacion'>
-                            Historial de estancias
-                        </li>
-                    </ul>
-            </div>
-
-        </div>
-
-        <div className='col '></div>
-      </div>
+  <>
+ <div className='d-flex container-fluid'>
+  <div className='container-fluid sidebar card bg-success shadow-lg'>
+      <Sidebar/>
+  </div>
+  <div className='container-fluid'>
+    {//<Inicio/>
+    }
+    <Historial/> 
+  </div>
+  </div>
+  </>
     )
 }
 
