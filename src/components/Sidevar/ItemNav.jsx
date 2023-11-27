@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function ItemNav({Link,Name}) {
+export default function ItemNav({ruta,Name}) {
   return (
     <>
-        <li class="nav-item mt-3 h-25 text-center ">
-            <div class="h-100 shadow rounded-2 bg-white d-flex align-items-center justify-content-center text-center">
-              <a className="nav-link active h-100 d-flex align-items-center justify-content-center text-center " href={Link}>
+        <li className="nav-item mt-3 h-25 text-center ">
+            <div className="h-100 shadow rounded-2 bg-white d-flex align-items-center justify-content-center text-center">
+              <Link className="nav-link active h-100 d-flex align-items-center justify-content-center text-center " to={ruta}>
                 <span> {Name} </span>
-              </a>
+              </Link>
             </div>
         </li>
     </>

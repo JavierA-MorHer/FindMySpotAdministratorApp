@@ -1,0 +1,21 @@
+
+const [estacionamiento, setEstacionamiento] = useState()
+   
+  useEffect(()=>{
+    const aestacionamientos = async () =>  {
+  
+      const url = 'https://findmyspotserviceslugares-production.up.railway.app/api/Estacionamientos'  
+  
+      const respuesta = await fetch(url, {
+        'mode': 'cors',
+        'headers': {
+            'Access-Control-Allow-Origin': 'localhost:5173',
+        }
+    })
+      const resultado = await respuesta.json()
+      
+      console.log(respuesta)
+      }
+    
+      aestacionamientos();
+  },[])

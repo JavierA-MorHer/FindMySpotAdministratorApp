@@ -7,30 +7,46 @@ import {
 import Dashboard from './components/Dashboard.jsx'
 import Login from './components/Login.jsx'
 import * as bootstrap from 'bootstrap'
-import Dashboardprueba from './components/Dashboardprueba.jsx';
+import Inicio from './components/Page/Inicio/Inicio.jsx';
+import Historial from './components/Page/HistorialEstancias/Historial.jsx'
+import  Dashboardprueba from './components/Dashboardprueba.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/login",
     element: <Login />,  
   },
+
   {
     path: "/dashboard",
     element: <Dashboard />,
+    children: [
+      {
+        index:true, 
+        element: <Inicio/>,
+        //ErrorElement sirve para cuando hay errores en lugar de renderizar el error, se renderiza lo que se desea.
+      },
+      {
+        path: 'historial',
+        element: <Historial/>,
+      },
+
+    ]
   },
+
   {
-    path: "/dashboard/preba",
-    element: <Dashboardprueba />,
+    path: 'prueba',
+    element: <Dashboardprueba/>
   },
-  {
-    path: "/dashboar/historial"
-  },
+
+
+
 
 ]);
 
 
-ReactDOM.createRoot(document.getElementById('body')).render(
-  <React.StrictMode>
+ReactDOM.createRoot(document.getElementsByTagName('body')[0]).render(
+  
   <RouterProvider router={router} />
-</React.StrictMode>
+
 )
